@@ -1,0 +1,52 @@
+/* # Zera os estilos do navegador */
+
+/* 1. Zera margin, padding e define o box-sizing em tudo */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Evita que imagens e vídeos estourem o container */
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+/* 3. Remove o estilo padrão de listas */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 4. Remove o sublinhado dos links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 5. Faz fonte e cursor de botões e inputs herdarem do pai */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* 6. Evita quebras estranhas de texto */
+p,
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 7. Altura mínima da página e melhora a renderização de texto */
+body {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}

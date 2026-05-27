@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goal Radar — Verificar Email</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css"> <!-- Em todas as páginas -->
+  <link rel="stylesheet" href="../css/views/verify-email.css">
+</head>
+<body>
+
+  <main class="verify-page">
+
+    <div class="verify-card">
+
+      <header class="verify-card__header">
+        <a class="verify-card__logo" href="../index.html">Goal Radar</a>
+        <div class="verify-card__icon">
+          <i data-lucide="mail"></i>
+        </div>
+        <h1 class="verify-card__title">Verifique seu email</h1>
+        <p class="verify-card__subtitle">
+          Enviamos um código de 6 dígitos para <strong>seu@email.com</strong>.
+          Insira abaixo para confirmar sua conta.
+        </p>
+      </header>
+
+      <form class="verify-form">
+
+        <div class="verify-form__inputs">
+          <input class="verify-form__digit" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" autocomplete="off" />
+          <input class="verify-form__digit" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" autocomplete="off" />
+          <input class="verify-form__digit" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" autocomplete="off" />
+          <input class="verify-form__digit" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" autocomplete="off" />
+          <input class="verify-form__digit" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" autocomplete="off" />
+          <input class="verify-form__digit" type="text" maxlength="1" inputmode="numeric" pattern="[0-9]" autocomplete="off" />
+        </div>
+
+        <button class="btn btn--primary btn--full btn--verify" type="submit">
+          Confirmar conta
+        </button>
+
+      </form>
+
+      <footer class="verify-card__footer">
+        <p class="verify-card__resend">
+          Não recebeu o código?
+          <button class="verify-card__resend-btn" type="button">Reenviar</button>
+        </p>
+      </footer>
+
+    </div>
+
+  </main>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+  <script src="../js/services/auth.service.js"></script>
+  <script src="../js/components/otp-input.js"></script>   <!-- primeiro -->
+  <script src="../js/views/verify-email.js"></script>
+</body>
+</html>

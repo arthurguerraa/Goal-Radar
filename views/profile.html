@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goal Radar — Perfil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/views/profile.css">
+</head>
+
+<body>
+
+  <div id="nav-logged-placeholder"></div>
+
+  <main class="profile-page">
+
+    <!-- Cover + Avatar + Botão de editar -->
+    <div class="profile-cover">
+      <div class="profile-cover__image"></div>
+      <div class="profile-cover__bottom">
+        <div class="profile-avatar">
+          <img class="profile-avatar__image" src="" alt="Foto de perfil de João Silva" />
+          <span class="profile-avatar__fallback">JS</span>
+        </div>
+        <a class="btn btn--outline btn--sm" href="edit-profile.html">
+          Editar perfil
+        </a>
+      </div>
+    </div>
+
+    <!-- Informações do usuário -->
+    <!-- Informações do usuário -->
+    <section class="profile-info">
+      <h1 class="profile-info__name" style="visibility:hidden">placeholder</h1>
+      <p class="profile-info__username" style="visibility:hidden">@placeholder</p>
+
+      <div class="profile-info__bio-wrapper">
+        <p class="profile-info__bio">Nenhuma bio cadastrada.</p>
+        <button class="profile-info__bio-edit" id="bio-edit-btn" aria-label="Editar bio">
+          <i data-lucide="pencil"></i>
+        </button>
+      </div>
+
+      <div class="profile-info__bio-form" id="bio-form" style="display:none">
+        <textarea class="profile-info__bio-input" id="bio-input" maxlength="160" rows="3"
+          placeholder="Conte um pouco sobre você..."></textarea>
+        <div class="profile-info__bio-actions">
+          <button class="btn btn--primary btn--sm" id="bio-save-btn">Salvar</button>
+          <button class="btn btn--ghost btn--sm" id="bio-cancel-btn">Cancelar</button>
+        </div>
+      </div>
+
+      <div class="profile-info__meta">
+        <span class="profile-info__meta-item">
+          <i data-lucide="calendar"></i>
+          Membro desde jan. 2025
+        </span>
+      </div>
+    </section>
+
+    <!-- Ligas favoritas -->
+    <section class="profile-section">
+      <h2 class="profile-section__title">Ligas favoritas</h2>
+      <ul class="leagues-grid">
+        <li class="league-card">
+          <div class="league-card__logo">
+            <img src="" alt="Logo Premier League" />
+            <span class="league-card__logo-fallback">PL</span>
+          </div>
+          <span class="league-card__name">Premier League</span>
+        </li>
+        <li class="league-card">
+          <div class="league-card__logo">
+            <img src="" alt="Logo Bundesliga" />
+            <span class="league-card__logo-fallback">BL</span>
+          </div>
+          <span class="league-card__name">Bundesliga</span>
+        </li>
+        <li class="league-card">
+          <div class="league-card__logo">
+            <img src="" alt="Logo Brasileirão" />
+            <span class="league-card__logo-fallback">BR</span>
+          </div>
+          <span class="league-card__name">Brasileirão</span>
+        </li>
+        <li class="league-card">
+          <div class="league-card__logo">
+            <img src="" alt="Logo La Liga" />
+            <span class="league-card__logo-fallback">LL</span>
+          </div>
+          <span class="league-card__name">La Liga</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Mercados favoritos -->
+    <section class="profile-section">
+      <h2 class="profile-section__title">Mercados favoritos</h2>
+      <ul class="markets-grid">
+        <li class="market-pill">BTTS</li>
+        <li class="market-pill">+2.5 gols</li>
+        <li class="market-pill">+1.5 gols</li>
+        <li class="market-pill">Over escanteios</li>
+        <li class="market-pill">Gol 1º tempo</li>
+        <li class="market-pill">+3.5 gols</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div> <!-- Footer entra aqui -->
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+  <script src="../js/services/auth.service.js"></script>
+  <script src="../js/components/load-components.js"></script>
+  <script src="../js/views/profile.js"></script>
+
+</body>
+
+</html>

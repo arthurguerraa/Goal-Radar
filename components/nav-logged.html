@@ -1,0 +1,49 @@
+<nav class="nav">
+  <ul class="nav__list">
+
+    <li class="nav__item">
+      <a class="nav__logo" href="/index.html">Goal Radar</a>
+    </li>
+
+    <li class="nav__item">
+      <a class="nav__link" href="../views/dashboard.html">Dashboard</a>
+    </li>
+
+    <li class="nav__item nav__item--user">
+      <button class="nav__avatar-btn" id="nav-avatar-btn" aria-haspopup="true" aria-expanded="false">
+        <div class="nav__avatar" id="nav-avatar">PH</div>
+        <span class="nav__username" id="nav-username">Placeholder</span>
+        <i data-lucide="chevron-down" class="nav__chevron" id="nav-chevron"></i>
+      </button>
+
+      <div class="nav__dropdown" id="nav-dropdown" aria-hidden="true">
+        <div class="nav__dropdown-header">
+          <p class="nav__dropdown-name" id="nav-dropdown-name">João Silva</p>
+          <p class="nav__dropdown-user" id="nav-dropdown-username">@joaosilva</p>
+        </div>
+        <ul class="nav__dropdown-list">
+          <li>
+            <a class="nav__dropdown-item" href="../views/profile.html">
+              <i data-lucide="user"></i>
+              Ver perfil
+            </a>
+          </li>
+          <li>
+            <a class="nav__dropdown-item" href="../views/edit-profile.html">
+              <i data-lucide="settings"></i>
+              Editar perfil
+            </a>
+          </li>
+          <li class="nav__dropdown-divider"></li>
+          <li>
+            <button class="nav__dropdown-item nav__dropdown-item--danger" id="nav-logout-btn">
+              <i data-lucide="log-out"></i>
+              Sair
+            </button>
+          </li>
+        </ul>
+      </div>
+    </li>
+
+  </ul>
+</nav>

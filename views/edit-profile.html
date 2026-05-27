@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goal Radar — Editar Perfil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/views/edit-profile.css">
+</head>
+
+<body>
+
+  <div id="nav-logged-placeholder"></div>
+
+  <main class="edit-profile-page">
+
+    <div class="edit-profile-page__header">
+      <a class="edit-profile-page__back" href="profile.html">
+        <i data-lucide="arrow-left"></i>
+        Voltar ao perfil
+      </a>
+      <h1 class="edit-profile-page__title">Editar perfil</h1>
+    </div>
+
+    <!-- Grid de 2 colunas -->
+    <div class="edit-profile-page__grid">
+
+      <!-- Card 1 — Informações pessoais -->
+      <section class="edit-card">
+        <h2 class="edit-card__title">Informações pessoais</h2>
+        <p class="edit-card__desc">Atualize sua data de nascimento e bio.</p>
+        <form class="edit-form">
+
+          <div class="edit-form__field">
+            <label class="edit-form__label" for="birthdate">Data de nascimento</label>
+            <input class="edit-form__input" type="date" id="birthdate" name="birthdate" />
+          </div>
+          <button class="btn btn--primary btn--sm" type="submit">Salvar</button>
+        </form>
+      </section>
+
+      <!-- Card 2 — Alterar email -->
+      <section class="edit-card">
+        <h2 class="edit-card__title">Alterar email</h2>
+        <div class="edit-card__email-status">
+          <span class="edit-card__email-current">joao@email.com</span>
+          <span class="edit-card__badge edit-card__badge--verified">
+            <i data-lucide="check"></i>
+            Email verificado
+          </span>
+        </div>
+        <form class="edit-form">
+          <div class="edit-form__field">
+            <label class="edit-form__label" for="new-email">Novo email</label>
+            <div class="edit-form__input-row">
+              <input class="edit-form__input" type="email" id="new-email" name="new-email" placeholder="novo@email.com"
+                autocomplete="email" />
+              <button class="btn btn--primary btn--sm" type="submit">
+                Solicitar alteração
+              </button>
+            </div>
+            <p class="edit-form__hint">
+              Um link de confirmação será enviado para o novo endereço.
+            </p>
+          </div>
+        </form>
+      </section>
+
+      <!-- Card 3 — Alterar senha -->
+      <section class="edit-card">
+        <h2 class="edit-card__title">Alterar senha</h2>
+        <p class="edit-card__desc">Sua senha deve ter no mínimo 8 caracteres.</p>
+        <form class="edit-form">
+          <div class="edit-form__field">
+            <label class="edit-form__label" for="current-password">Senha atual</label>
+            <div class="edit-form__input-wrapper">
+              <input class="edit-form__input" type="password" id="current-password" name="current-password"
+                placeholder="••••••••" autocomplete="current-password" />
+              <button class="edit-form__toggle-password" type="button" aria-label="Mostrar senha">
+                <i data-lucide="eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="edit-form__field">
+            <label class="edit-form__label" for="new-password">Nova senha</label>
+            <div class="edit-form__input-wrapper">
+              <input class="edit-form__input" type="password" id="new-password" name="new-password"
+                placeholder="••••••••" minlength="8" autocomplete="new-password" />
+              <button class="edit-form__toggle-password" type="button" aria-label="Mostrar nova senha">
+                <i data-lucide="eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="edit-form__field">
+            <label class="edit-form__label" for="confirm-password">Confirmar nova senha</label>
+            <div class="edit-form__input-wrapper">
+              <input class="edit-form__input" type="password" id="confirm-password" name="confirm-password"
+                placeholder="••••••••" minlength="8" autocomplete="new-password" />
+              <button class="edit-form__toggle-password" type="button" aria-label="Mostrar confirmação">
+                <i data-lucide="eye"></i>
+              </button>
+            </div>
+          </div>
+          <button class="btn btn--primary btn--sm btn--save-password" type="submit">
+            Salvar senha
+          </button>
+        </form>
+      </section>
+
+      <!-- Card 4 — Zona de perigo -->
+      <section class="edit-card edit-card--danger">
+        <h2 class="edit-card__title edit-card__title--danger">Zona de perigo</h2>
+        <div class="danger-row">
+          <div class="danger-row__info">
+            <p class="danger-row__label">Sair da conta</p>
+            <p class="danger-row__sublabel">Encerra sua sessão atual.</p>
+          </div>
+          <button class="btn btn--outline btn--sm">Sair</button>
+        </div>
+        <div class="danger-row">
+          <div class="danger-row__info">
+            <p class="danger-row__label">Desativar conta</p>
+            <p class="danger-row__sublabel">Sua conta ficará inacessível até você reativá-la.</p>
+          </div>
+          <button class="btn btn--danger btn--sm">Desativar</button>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+  <script src="../js/services/auth.service.js"></script>
+  <script src="../js/components/load-components.js"></script>
+  <script src="../js/components/toggle-password.js"></script>
+  <script src="../js/views/edit-profile.js"></script>
+</body>
+
+</html>

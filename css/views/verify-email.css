@@ -1,0 +1,161 @@
+/* ================================
+   VERIFY EMAIL
+   Página de verificação de email
+================================ */
+
+/* ---- Página inteira centralizada ---- */
+.verify-page {
+  min-height: 100vh;
+  background-color: var(--bg-page);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+}
+
+/* ---- Card ---- */
+.verify-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* ---- Cabeçalho ---- */
+.verify-card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  text-align: center;
+}
+
+.verify-card__logo {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+  align-self: center;
+}
+
+/* ---- Ícone de email em destaque ---- */
+.verify-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-sm);
+}
+
+.verify-card__icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--color-primary);
+}
+
+.verify-card__title {
+  font-size: var(--text-md);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+}
+
+.verify-card__subtitle {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  max-width: 320px;
+}
+
+.verify-card__subtitle strong {
+  color: var(--text-primary);
+}
+
+/* ---- Formulário ---- */
+.verify-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* ---- Inputs OTP ---- */
+.verify-form__inputs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.verify-form__digit {
+  width: 48px;
+  height: 56px;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  text-align: center;
+  transition: border-color var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+
+.verify-form__digit:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-soft);
+}
+
+/* Fica verde quando preenchido */
+.verify-form__digit.is-filled {
+  border-color: var(--color-primary);
+}
+
+/* ---- Botão ---- */
+.btn--verify {
+  margin-top: var(--space-sm);
+}
+
+/* ---- Rodapé do card ---- */
+.verify-card__footer {
+  display: flex;
+  justify-content: center;
+}
+
+.verify-card__resend {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.verify-card__resend-btn {
+  color: var(--color-primary);
+  font-weight: var(--font-medium);
+  font-size: var(--text-sm);
+  transition: color var(--transition-fast);
+}
+
+.verify-card__resend-btn:hover {
+  color: var(--color-primary-hover);
+}
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+@media (max-width: 768px) {
+  .verify-card {
+    padding: var(--space-lg);
+  }
+
+  /* Inputs menores no celular pra caber os 6 na tela */
+  .verify-form__digit {
+    width: 40px;
+    height: 48px;
+    font-size: var(--text-md);
+  }
+}

@@ -1,0 +1,160 @@
+/* ================================
+   REGISTER
+   Página de cadastro
+================================ */
+
+/* ---- Página inteira centralizada ---- */
+.register-page {
+  min-height: 100vh;
+  background-color: var(--bg-page);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+}
+
+/* ---- Card de cadastro ---- */
+.register-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* ---- Cabeçalho ---- */
+.register-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.register-card__logo {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+  text-align: center;
+}
+
+.register-card__title {
+  font-size: var(--text-md);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.register-card__subtitle {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* ---- Formulário ---- */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.register-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.register-form__label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--text-secondary);
+}
+
+.register-form__input {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm);
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  transition: border-color var(--transition-fast);
+  width: 100%;
+}
+
+.register-form__input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-soft);
+}
+
+/* ---- Wrapper do input com ícone ---- */
+.register-form__input-wrapper {
+  position: relative;
+}
+
+.register-form__input-wrapper .register-form__input {
+  padding-right: 48px;
+}
+
+/* ---- Botão do olho ---- */
+.register-form__toggle-password {
+  position: absolute;
+  right: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.register-form__toggle-password:hover {
+  color: var(--text-primary);
+}
+
+.register-form__toggle-password svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ---- Espaço acima do botão de submit ---- */
+.btn--register {
+  margin-top: var(--space-md);
+}
+
+/* ---- Rodapé do card ---- */
+.register-card__footer {
+  display: flex;
+  justify-content: center;
+}
+
+.register-card__login {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.register-card__login-link {
+  color: var(--color-primary);
+  font-weight: var(--font-medium);
+  transition: color var(--transition-fast);
+}
+
+.register-card__login-link:hover {
+  color: var(--color-primary-hover);
+}
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+@media (max-width: 768px) {
+  .register-card {
+    padding: var(--space-lg);      /* Reduz o padding interno no celular */
+    gap: var(--space-lg);          /* Reduz o espaço entre os elementos */
+  }
+
+  .register-form {
+    gap: var(--space-md);          /* Campos mais próximos no celular */
+  }
+}

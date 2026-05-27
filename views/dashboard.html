@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goal Radar — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/views/dashboard.css">
+</head>
+<body>
+
+  <div id="nav-logged-placeholder"></div>
+
+  <div class="dashboard">
+
+    <!-- ========================
+         SIDEBAR (desktop)
+         ABAS (mobile)
+    ========================= -->
+    <aside class="dashboard__sidebar">
+
+      <div class="sidebar__league">
+        <label class="sidebar__league-label">Liga</label>
+        <select class="sidebar__league-select">
+          <option>Premier League</option>
+          <option>Bundesliga</option>
+          <option>Brasileirão</option>
+          <option>La Liga</option>
+          <option>Serie A</option>
+        </select>
+      </div>
+
+      <nav class="sidebar__nav">
+        <p class="sidebar__nav-label">Seções</p>
+        <ul class="sidebar__nav-list">
+          <li class="sidebar__nav-item active" data-section="classificacao">
+            <i data-lucide="list-ordered"></i>
+            Classificação
+          </li>
+          <li class="sidebar__nav-item" data-section="confrontos">
+            <i data-lucide="calendar-days"></i>
+            Confrontos
+          </li>
+          <li class="sidebar__nav-item" data-section="gols">
+            <i data-lucide="goal"></i>
+            Gols
+          </li>
+          <li class="sidebar__nav-item" data-section="cartoes">
+            <i data-lucide="square"></i>
+            Cartões
+          </li>
+          <li class="sidebar__nav-item" data-section="escanteios">
+            <i data-lucide="flag"></i>
+            Escanteios
+          </li>
+        </ul>
+      </nav>
+
+    </aside>
+
+    <!-- ========================
+         ABAS (só no mobile)
+    ========================= -->
+    <div class="dashboard__tabs">
+      <button class="dashboard__tab active" data-section="classificacao">
+        <i data-lucide="list-ordered"></i>
+        Classificação
+      </button>
+      <button class="dashboard__tab" data-section="confrontos">
+        <i data-lucide="calendar-days"></i>
+        Confrontos
+      </button>
+      <button class="dashboard__tab" data-section="gols">
+        <i data-lucide="goal"></i>
+        Gols
+      </button>
+      <button class="dashboard__tab" data-section="cartoes">
+        <i data-lucide="square"></i>
+        Cartões
+      </button>
+      <button class="dashboard__tab" data-section="escanteios">
+        <i data-lucide="flag"></i>
+        Escanteios
+      </button>
+    </div>
+
+    <!-- ========================
+         CONTEÚDO
+    ========================= -->
+    <main class="dashboard__content">
+
+      <!-- Classificação -->
+      <section class="dashboard__section active" id="classificacao">
+        <h2 class="section__title">Classificação</h2>
+        <div class="table-card">
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th class="col-pos">#</th>
+                  <th class="col-team">Time</th>
+                  <th>J</th>
+                  <th>V</th>
+                  <th>E</th>
+                  <th>D</th>
+                  <th>GF</th>
+                  <th>GS</th>
+                  <th>SG</th>
+                  <th>Forma</th>
+                  <th>Pts</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-classificacao">
+                <!-- Preenchido via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Confrontos -->
+      <section class="dashboard__section" id="confrontos">
+        <div class="section__title-row">
+          <h2 class="section__title">Confrontos</h2>
+          <div class="round-nav">
+            <button class="round-nav__btn" id="prev-round">
+              <i data-lucide="chevron-left"></i>
+            </button>
+            <span class="round-nav__label" id="round-label">Rod. 31</span>
+            <button class="round-nav__btn" id="next-round">
+              <i data-lucide="chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="matches-list" id="matches-list">
+          <!-- Preenchido via JS -->
+        </div>
+      </section>
+
+      <!-- Gols -->
+      <section class="dashboard__section" id="gols">
+        <h2 class="section__title">Média de gols — Casa & Fora</h2>
+        <div class="table-card">
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th class="col-team" rowspan="2">Time</th>
+                  <th colspan="2" class="col-group">Casa</th>
+                  <th colspan="2" class="col-group">Fora</th>
+                </tr>
+                <tr>
+                  <th>Feitos</th>
+                  <th>Sofridos</th>
+                  <th>Feitos</th>
+                  <th>Sofridos</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-gols">
+                <!-- Preenchido via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cartões -->
+      <section class="dashboard__section" id="cartoes">
+        <h2 class="section__title">Cartões — Casa & Fora</h2>
+        <div class="table-card">
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th class="col-team" rowspan="2">Time</th>
+                  <th colspan="2" class="col-group">Casa</th>
+                  <th colspan="2" class="col-group">Fora</th>
+                </tr>
+                <tr>
+                  <th>Recebidos</th>
+                  <th>Adversário</th>
+                  <th>Recebidos</th>
+                  <th>Adversário</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-cartoes">
+                <!-- Preenchido via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Escanteios -->
+      <section class="dashboard__section" id="escanteios">
+        <h2 class="section__title">Escanteios — Casa & Fora</h2>
+        <div class="table-card">
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th class="col-team" rowspan="2">Time</th>
+                  <th colspan="2" class="col-group">Casa</th>
+                  <th colspan="2" class="col-group">Fora</th>
+                </tr>
+                <tr>
+                  <th>Ganhos</th>
+                  <th>Cedidos</th>
+                  <th>Ganhos</th>
+                  <th>Cedidos</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-escanteios">
+                <!-- Preenchido via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+  <script src="../js/services/auth.service.js"></script>
+  <script src="../js/components/load-components.js"></script>
+  <script src="../js/views/dashboard.js"></script>
+</body>
+</html>

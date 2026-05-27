@@ -1,0 +1,16 @@
+/* # Importa tudo numa ordem certa */
+
+/* 1. Base (sempre primeiro) */
+@import './base/reset.css';
+@import './base/variables.css';
+@import './base/typography.css';
+@import './base/skeleton.css';
+
+/* 2. Layout global */
+@import './layout/nav.css';
+@import './layout/footer.css';
+
+/* 3. Componentes reutilizáveis */
+@import './components/button.css';
+@import './components/card.css';
+

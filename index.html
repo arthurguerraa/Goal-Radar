@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goal Radar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css"> <!-- Em todas as páginas -->
+  <link rel="stylesheet" href="css/views/index.css"> <!-- Só na index -->
+</head>
+
+<body>
+
+  <div id="nav-placeholder"></div> <!-- Nav entra aqui -->
+
+  <main>
+
+    <section class="hero">
+      <h1 class="hero__title">
+        Probabilidades reais para suas
+        <span>apostas em futebol</span>
+      </h1>
+      <p class="hero__subtitle">
+        O Goal Radar transforma estatísticas históricas em probabilidades e odds
+        para gols, escanteios, cartões, BTTS e muito mais — antes de cada rodada.
+      </p>
+      <a class="btn btn--primary btn--lg" href="views/register.html">Começar gratuitamente</a>
+    </section>
+
+    <section class="how-it-works">
+      <h2 class="how-it-works__title">Como funciona?</h2>
+      <ol class="how-it-works__steps">
+
+        <li class="how-it-works__step">
+          <span class="how-it-works__step-number">1</span>
+          <p class="how-it-works__step-text">
+            Coletamos as estatísticas históricas de cada time — gols, escanteios,
+            cartões e mais, dentro e fora de casa.
+          </p>
+        </li>
+
+        <li class="how-it-works__step">
+          <span class="how-it-works__step-number">2</span>
+          <p class="how-it-works__step-text">
+            Nosso algoritmo cruza os dados do mandante e visitante e calcula
+            a probabilidade real de cada evento acontecer na partida.
+          </p>
+        </li>
+
+        <li class="how-it-works__step">
+          <span class="how-it-works__step-number">3</span>
+          <p class="how-it-works__step-text">
+            Você compara nossa odd calculada com as odds do mercado e identifica
+            onde está o valor real para apostar.
+          </p>
+        </li>
+
+      </ol>
+    </section>
+
+    <section class="differences">
+      <ul class="differences__list">
+
+        <li class="differences__item">
+          <strong><i data-lucide="volleyball"></i> Mercados de gols</strong>
+          <p>Probabilidades para +0.5, +1.5, +2.5 e mais, baseadas na média
+            de gols feitos e sofridos de cada time.</p>
+        </li>
+
+        <li class="differences__item">
+          <strong><i data-lucide="flag"></i> Escanteios e cartões</strong>
+          <p>A mesma lógica estatística aplicada a escanteios, cartões amarelos,
+            vermelhos e outras estatísticas da partida.</p>
+        </li>
+
+        <li class="differences__item">
+          <strong><i data-lucide="target"></i> BTTS e parciais</strong>
+          <p>Calcule a chance de ambos os times marcarem e a distribuição
+            de gols no primeiro e segundo tempo.</p>
+        </li>
+
+        <li class="differences__item">
+          <strong><i data-lucide="file-chart-column"></i> Comparação com o mercado</strong>
+          <p>Veja lado a lado a nossa odd calculada e a odd das casas de aposta
+            para identificar onde está o valor.</p>
+        </li>
+
+      </ul>
+    </section>
+
+    <section class="screenshot">
+      <img class="screenshot__image" src=""
+        alt="Preview do dashboard do Goal Radar mostrando probabilidades de uma partida" />
+    </section>
+
+    <section class="call-to-action">
+      <p class="call-to-action__text">Tome decisões baseadas em dados, não em achismo.</p>
+      <a class="btn btn--primary btn--lg" href="views/register.html">Criar conta grátis</a>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div> <!-- Footer entra aqui -->
+
+  <script src="../js/services/auth.service.js"></script>
+  <script>
+    // Se já estiver logado, troca a navbar pública pela logada
+    if (AuthService.getToken()) {
+      document.getElementById('nav-placeholder').id = 'nav-logged-placeholder';
+    }
+  </script>
+  <script src="js/components/load-components.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+
+</body>
+
+</html>

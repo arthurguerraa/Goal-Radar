@@ -1,0 +1,174 @@
+/* ================================
+   LOGIN
+   Página de autenticação
+================================ */
+
+/* ---- Página inteira centralizada ---- */
+.login-page {
+  min-height: 100vh;
+  background-color: var(--bg-page);
+  display: flex;
+  align-items: center;             /* Centraliza verticalmente */
+  justify-content: center;         /* Centraliza horizontalmente */
+  padding: var(--space-md);        /* Evita card colado nas bordas no celular */
+}
+
+/* ---- Card de login ---- */
+.login-card {
+  width: 100%;
+  max-width: 420px;                /* Largura padrão de formulários de login */
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* ---- Cabeçalho ---- */
+.login-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.login-card__logo {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);  /* Respiro entre logo e título */
+  text-align: center;
+}
+
+.login-card__title {
+  font-size: var(--text-md);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.login-card__subtitle {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* ---- Formulário ---- */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.login-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/* ---- Linha do label com o link "Esqueci minha senha" ---- */
+.login-form__label-row {
+  display: flex;
+  justify-content: space-between;  /* Label à esquerda, link à direita */
+  align-items: center;
+}
+
+.login-form__label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--text-secondary);
+}
+
+.login-form__input {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm);
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  transition: border-color var(--transition-fast);
+  width: 100%;
+}
+
+/* Borda verde ao focar no campo */
+.login-form__input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-soft);
+}
+
+.login-form__forgot {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.login-form__forgot:hover {
+  color: var(--color-primary);
+}
+
+.login-form__submit{
+  margin-top: var(--space-md);
+}
+
+/* ---- Rodapé do card ---- */
+.login-card__footer {
+  display: flex;
+  justify-content: center;
+}
+
+.login-card__register {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.login-card__register-link {
+  color: var(--color-primary);
+  font-weight: var(--font-medium);
+  transition: color var(--transition-fast);
+}
+
+.login-card__register-link:hover {
+  color: var(--color-primary-hover);
+}
+
+
+/* ---- Wrapper do input com ícone ---- */
+.login-form__input-wrapper {
+  position: relative;              /* Referência pra posicionar o ícone */
+}
+
+/* ---- Empurra o texto pra não ficar atrás do ícone ---- */
+.login-form__input-wrapper .login-form__input {
+  padding-right: 48px;
+}
+
+/* ---- Botão do olho ---- */
+.login-form__toggle-password {
+  position: absolute;
+  right: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);     /* Centraliza verticalmente no input */
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.login-form__toggle-password:hover {
+  color: var(--text-primary);
+}
+
+.login-form__toggle-password svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+@media (max-width: 768px) {
+  .login-card {
+    padding: var(--space-lg);      /* Reduz o padding interno no celular */
+  }
+}

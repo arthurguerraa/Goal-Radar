@@ -1,0 +1,54 @@
+/* # Estilos gerais de texto */
+
+/* ---- Configuração base do body ---- */
+body {
+  font-family: var(--font-primary);
+  font-size: var(--text-base);       /* 16px — tamanho padrão de leitura */
+  font-weight: var(--font-normal);
+  color: var(--text-primary);
+  line-height: 1.6;                  /* Espaço entre linhas — facilita a leitura */
+}
+
+/* ---- Títulos ---- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  line-height: 1.2;                  /* Títulos ficam mais compactos */
+}
+
+h1 { font-size: var(--text-3xl); }  /* 48px — título principal da página */
+h2 { font-size: var(--text-2xl); }  /* 40px — título de seção */
+h3 { font-size: var(--text-xl);  }  /* 32px — título de subseção */
+h4 { font-size: var(--text-lg);  }  /* 24px — título de card */
+h5 { font-size: var(--text-md);  }  /* 20px */
+h6 { font-size: var(--text-base);} /* 16px */
+
+/* ---- Parágrafo ---- */
+p {
+  font-size: var(--text-base);
+  color: var(--text-secondary);      /* Textos de apoio em cinza */
+  line-height: 1.7;                  /* Um pouco mais espaçado que títulos */
+  max-width: 65ch;                   /* Limita largura para facilitar leitura */
+}
+
+/* ---- Links ---- */
+a {
+  color: var(--color-primary);
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* ---- Textos de apoio ---- */
+small {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+strong {
+  font-weight: var(--font-bold);
+  color: var(--text-primary);        /* Destaque fica na cor principal */
+}

@@ -1,0 +1,68 @@
+/* # Cores, fontes, tamanhos */
+
+:root {
+
+  /* ---- Identidade / Marca ---- */
+  --color-primary:        #10B981; /* Verde Esmeralda Moderno */
+  --color-primary-hover:  #059669; /* Verde mais escuro (ao passar o mouse) */
+  --color-primary-soft:   rgba(16, 185, 129, 0.15); /* Fundo esverdeado transparente */
+
+  /* ---- Fundos ---- */
+  --bg-page:              #121212; /* Cinza quase preto (melhor que #000) */
+  --bg-card:              #1E1E1E; /* Fundo do container */
+  --bg-input:             #27272a; /* Fundo dos inputs (onde digita) */
+
+  /* ---- Textos ---- */
+  --text-primary:         #F1F5F9; /* Branco gelo (lê melhor que branco puro) */
+  --text-secondary:       #94A3B8; /* Cinza azulado (para labels "Nome", "Email") */
+  --text-inverted:        #0f172a; /* Cor escura (para usar DENTRO do botão verde) */
+
+  /* ---- Bordas ---- */
+  --border-subtle:        #3F3F46; /* Linha fina cinza para separar áreas */
+
+  /* ---- Feedback ---- */
+  --color-success:        #34a853;
+  --color-error:          #ea4335;
+  --color-warning:        #fbbc04;
+
+  /* ---- Tipografia ---- */
+  --font-primary:         'Inter', sans-serif;
+  --font-heading:         'Inter', sans-serif;
+
+  --text-xs:   0.75rem;    /*  12px */
+  --text-sm:   0.875rem;   /*  14px */
+  --text-base: 1rem;       /*  16px */
+  --text-md:   1.25rem;    /*  20px */
+  --text-lg:   1.5rem;     /*  24px */
+  --text-xl:   2rem;       /*  32px */
+  --text-2xl:  2.5rem;     /*  40px */
+  --text-3xl:  3rem;       /*  48px */
+
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-bold:   700;
+
+  /* ---- Espaçamentos ---- */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+
+  /* ---- Arredondamento de bordas ---- */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-full: 9999px; /* Deixa completamente arredondado */
+
+  /* ---- Sombras ---- */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+  /* ---- Transições ---- */
+  --transition-fast:   0.15s ease;
+  --transition-normal: 0.3s ease;
+}

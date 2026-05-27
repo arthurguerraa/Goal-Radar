@@ -1,0 +1,319 @@
+/*  # Estilos exclusivos da página inicial */
+
+/* ---- Configuração geral do main ---- */
+main {
+  padding-top: 64px; /* Compensa a altura da navbar fixa */
+  background-color: var(--bg-page);
+}
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;              /* Centraliza horizontalmente */
+  text-align: center;
+  padding: var(--space-3xl) var(--space-xl);
+  gap: var(--space-lg);
+}
+
+.hero__title {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  max-width: 700px;                 /* Evita título muito largo */
+}
+
+/* Deixa uma palavra do título em verde — efeito comum em landing pages */
+.hero__title span {
+  color: var(--color-primary);
+}
+
+.hero__subtitle {
+  font-size: var(--text-md);
+  color: var(--text-secondary);
+  max-width: 520px;
+}
+
+.hero__button {
+  background-color: var(--color-primary);
+  color: var(--text-inverted);
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.hero__button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* ================================
+   COMO FUNCIONA
+================================ */
+
+.how-it-works {
+  padding: var(--space-3xl) var(--space-xl);
+  text-align: center;
+}
+
+.how-it-works__title {
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2xl);
+}
+
+.how-it-works__steps {
+  display: flex;                    /* Passos lado a lado */
+  justify-content: center;
+  gap: var(--space-xl);
+}
+
+.how-it-works__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  max-width: 240px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+}
+
+/* Número do passo em destaque */
+.how-it-works__step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-weight: var(--font-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.how-it-works__step-text {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* ================================
+   DIFERENCIAIS
+================================ */
+
+.differences {
+  padding: var(--space-3xl) var(--space-xl);
+  background-color: var(--bg-card);  /* Fundo alternado pra separar seções */
+}
+
+.differences__list {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
+  flex-wrap: wrap;                   /* Quebra linha se não couber */
+}
+
+.differences__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 280px;
+  padding: var(--space-xl);
+  background-color: var(--bg-page);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition-normal);
+}
+
+/* Borda verde ao passar o mouse — efeito elegante */
+.differences__item:hover {
+  border-color: var(--color-primary);
+}
+
+/* ================================
+   SCREENSHOT
+================================ */
+
+.screenshot {
+  padding: var(--space-3xl) var(--space-xl);
+  display: flex;
+  justify-content: center;
+}
+
+.screenshot__image {
+  width: 100%;
+  max-width: 960px;                  /* Limita o tamanho máximo */
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ================================
+   CTA FINAL
+================================ */
+
+.call-to-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-lg);
+  padding: var(--space-3xl) var(--space-xl);
+  background-color: var(--color-primary-soft); /* Fundo esverdeado sutil */
+  border-top: 1px solid var(--border-subtle);
+}
+
+.call-to-action__text {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+}
+
+.call-to-action__button {
+  background-color: var(--color-primary);
+  color: var(--text-inverted);
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.call-to-action__button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.differences__item svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-primary);
+}
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+/* ---- Tablet (até 1024px) ---- */
+@media (max-width: 1024px) {
+
+  /* Hero */
+  .hero__title {
+    font-size: var(--text-2xl);      /* Título um pouco menor */
+  }
+
+  /* Como funciona — passos empilham em 2 colunas */
+  .how-it-works__steps {
+    flex-wrap: wrap;                 /* Permite quebrar linha */
+    justify-content: center;
+  }
+
+  .how-it-works__step {
+    flex: 1 1 calc(50% - var(--space-xl)); /* Dois por linha */
+    max-width: 100%;
+  }
+
+  /* Diferenciais — dois por linha */
+  .differences__item {
+    flex: 1 1 calc(50% - var(--space-xl));
+    max-width: 100%;
+  }
+
+  /* Footer — marca em cima, navs abaixo */
+  .footer__top {
+    flex-wrap: wrap;
+  }
+
+  .footer__brand {
+    flex: 1 1 100%;                  /* Ocupa linha inteira */
+  }
+}
+
+/* ---- Celular (até 768px) ---- */
+@media (max-width: 768px) {
+
+  /* Nav — esconde os itens (em produção viraria menu hamburguer) */
+  .nav {
+    padding: 0 var(--space-md);
+  }
+
+  .nav__item:not(:first-child):not(.nav__item--cta) {
+    display: none;
+  }
+
+  /* Hero — tudo menor e mais compacto */
+  .hero {
+    padding: var(--space-2xl) var(--space-md);
+  }
+
+  .hero__title {
+    font-size: var(--text-xl);
+  }
+
+  .hero__subtitle {
+    font-size: var(--text-base);
+  }
+
+  /* Como funciona — um passo por linha */
+  .how-it-works {
+    padding: var(--space-2xl) var(--space-md);
+  }
+
+  .how-it-works__steps {
+    flex-direction: column;          /* Empilha verticalmente */
+    align-items: center;
+  }
+
+  .how-it-works__step {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* Diferenciais — um por linha */
+  .differences {
+    padding: var(--space-2xl) var(--space-md);
+  }
+
+  .differences__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .differences__item {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* Screenshot — padding menor */
+  .screenshot {
+    padding: var(--space-2xl) var(--space-md);
+  }
+
+  /* CTA */
+  .cta {
+    padding: var(--space-2xl) var(--space-md);
+  }
+
+  .cta__text {
+    font-size: var(--text-xl);
+  }
+
+  /* Botão ocupa largura total no celular */
+  .cta .btn {
+    width: 100%;
+  }
+
+  /* Footer — colunas empilhadas */
+  .footer__top {
+    gap: var(--space-xl);
+  }
+
+  .footer__nav {
+    flex: 1 1 100%;
+  }
+}

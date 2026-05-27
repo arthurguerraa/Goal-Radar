@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goal Radar — Cadastro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/views/register.css">
+</head>
+
+<body>
+
+  <main class="register-page">
+
+    <div class="register-card">
+
+      <!-- Cabeçalho do card -->
+      <header class="register-card__header">
+        <a class="register-card__logo" href="../index.html">Goal Radar</a>
+        <h1 class="register-card__title">Crie sua conta</h1>
+        <p class="register-card__subtitle">Comece a apostar com dados reais</p>
+      </header>
+
+      <!-- Formulário -->
+      <form class="register-form">
+
+        <div class="register-form__field">
+          <label class="register-form__label" for="username">
+            Nome de usuário
+          </label>
+          <input class="register-form__input" type="text" id="username" name="username" placeholder="ex: joaosilva"
+            autocomplete="username" />
+        </div>
+
+        <div class="register-form__field">
+          <label class="register-form__label" for="birthdate">
+            Data de nascimento
+          </label>
+          <input class="register-form__input" type="date" id="birthdate" name="birthdate" />
+        </div>
+
+        <div class="register-form__field">
+          <label class="register-form__label" for="email">
+            Email
+          </label>
+          <input class="register-form__input" type="email" id="email" name="email" placeholder="seu@email.com"
+            autocomplete="email" />
+        </div>
+
+        <div class="register-form__field">
+          <label class="register-form__label" for="password">
+            Senha
+          </label>
+          <div class="register-form__input-wrapper">
+            <input class="register-form__input" type="password" id="password" name="password"
+              placeholder="mínimo 8 caracteres" minlength="8" autocomplete="new-password" />
+            <button class="register-form__toggle-password" type="button" aria-label="Mostrar senha">
+              <i data-lucide="eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="register-form__field">
+          <label class="register-form__label" for="password-confirm">
+            Confirmação de senha
+          </label>
+          <div class="register-form__input-wrapper">
+            <input class="register-form__input" type="password" id="password-confirm" name="password-confirm"
+              placeholder="repita sua senha" minlength="8" autocomplete="new-password" />
+            <button class="register-form__toggle-password" type="button" aria-label="Mostrar confirmação de senha">
+              <i data-lucide="eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <button class="btn btn--primary btn--full btn--register" type="submit">
+          Criar conta
+        </button>
+
+      </form>
+
+      <!-- Rodapé do card -->
+      <footer class="register-card__footer">
+        <p class="register-card__login">
+          Já tem uma conta?
+          <a class="register-card__login-link" href="login.html">Entrar</a>
+        </p>
+      </footer>
+
+    </div>
+
+  </main>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+  <script src="../js/components/toggle-password.js"></script>
+  <script src="../js/services/auth.service.js"></script>
+  <script>
+    // Se já estiver logado, vai pro dashboard
+    if (AuthService.getToken()) {
+      window.location.href = 'dashboard.html';
+    }
+  </script>
+  <script src="../js/views/register.js"></script>
+
+</body>
+
+</html>
