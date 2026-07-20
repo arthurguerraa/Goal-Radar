@@ -32,11 +32,11 @@ function initNavLogged() {
   });
 
   if (logoutBtn) {
-    logoutBtn.addEventListener("click", () => {
-      AuthService.clearToken();
-      window.location.href = "/views/login.html";
-    });
-  }
+  logoutBtn.addEventListener('click', () => {
+    AuthService.clearToken();
+    window.location.href = '/Goal-Radar/views/login.html';
+  });
+}
 }
 
 function setActiveNavLink() {
